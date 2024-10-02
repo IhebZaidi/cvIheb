@@ -1,0 +1,118 @@
+/* Reset some default browser styles for consistency */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* More readable spacing between elements */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.nav a:hover {
+    color: #007bff; /* Highlight color on hover */
+}
+
+/* Profile Picture Styles */
+.photoprofile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    object-fit: cover; /* Makes the image fit the container nicely */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some depth to the image */
+}
+
+/* Main Content */
+.description, .competences {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.competences {
+    background-color: #e0e0e0;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    font-size: 0.9em;
+    gap: 20px;
+}
+
+footer img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px; /* Uniform gap between icons */
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s, filter 0.3s; /* Smooth transform and filter effect */
+}
+
+.icons img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Highlight effect on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
