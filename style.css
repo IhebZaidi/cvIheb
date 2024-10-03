@@ -1,4 +1,4 @@
-/* Reset some default browser styles for consistency */
+/* Reset default browser styles for consistency */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,36 +7,43 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f0f2f5;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Header Styles */
 header {
-    background-color: #f4f4f4;
-    padding: 20px;
+    background-color: #fff;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 20px; /* More readable spacing between elements */
+    gap: 30px;
 }
 
 .nav a {
     text-decoration: none;
     color: #333;
     font-weight: 600;
-    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+    padding: 10px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .nav a:hover {
-    color: #007bff; /* Highlight color on hover */
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 4px;
 }
 
 /* Profile Picture Styles */
@@ -46,23 +53,29 @@ header {
     border-radius: 50%;
     margin: 20px auto;
     display: block;
-    object-fit: cover; /* Makes the image fit the container nicely */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some depth to the image */
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border: 4px solid #007bff;
 }
 
 /* Main Content */
 .description, .competences {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 20px auto;
+    padding: 40px 30px;
+    max-width: 900px;
+    margin: 30px auto;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.description:hover, .competences:hover {
+    transform: translateY(-5px);
 }
 
 .competences {
-    background-color: #e0e0e0;
-    margin-top: 20px;
+    background-color: #f8f9fa;
+    margin-top: 30px;
 }
 
 /* Footer Styles */
@@ -71,10 +84,11 @@ footer {
     color: #fff;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 30px 40px;
     font-size: 0.9em;
     gap: 20px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 
 footer img {
@@ -84,18 +98,36 @@ footer img {
 
 .icons {
     display: flex;
-    gap: 15px; /* Uniform gap between icons */
+    gap: 20px;
 }
 
 .icons img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s, filter 0.3s; /* Smooth transform and filter effect */
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
 }
 
 .icons img:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2); /* Highlight effect on hover */
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Responsive Adjustments */
@@ -107,12 +139,64 @@ footer img {
 
     .nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    .nav a {
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .description, .competences {
+        padding: 30px 20px;
+        margin: 20px 15px;
     }
 
     footer {
         flex-direction: column;
         text-align: center;
     }
+
+    .photoprofile {
+        width: 120px;
+        height: 120px;
+    }
+
+}
+/* Styles pour toutes les images */
+img {
+    max-width: 100%; /* S'assure que les images ne dépassent pas leur conteneur */
+    height: auto; /* Maintient le ratio d'aspect */
+    display: block; /* Supprime l'espace en bas de l'image */
+    margin: 0 auto; /* Centre les images */
+    border-radius: 8px; /* Donne des coins arrondis pour un style plus doux */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet de surélévation */
 }
 
+/* Style spécifique pour les images de la section "about" */
+.about-me {
+    width: 250px; /* Taille définie pour la photo de profil */
+    border-radius: 50%; /* Donne une forme ronde à l'image de profil */
+    margin-top: 20px; /* Espace entre l'image et le reste du contenu */
+}
+
+/* Styles spécifiques pour les images des informations personnelles */
+.personal-info img {
+    width: 40px; /* Taille fixe pour les icônes des infos personnelles */
+    height: 40px; /* Hauteur fixe pour garder une cohérence */
+    border-radius: 50%; /* Donne des coins arrondis aux icônes */
+}
+
+/* Styles spécifiques pour les images des centres d'intérêt */
+.voyage {
+    max-width: 600px; /* Limite la taille maximale de l'image */
+    height: auto; /* Garde le ratio d'aspect */
+    margin: 20px auto; /* Centre l'image et ajoute un espace autour */
+}
+
+/* Effet d'animation au survol de toutes les images */
+img:hover {
+    transform: scale(1.05); /* Augmente légèrement la taille de l'image au survol */
+    transition: transform 0.3s ease; /* Transition douce pour l'effet de zoom */
+}

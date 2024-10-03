@@ -1,76 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos de Iheb Zaidi</title>
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<header>
-    <div class="me">
-        <h1 >Iheb Zaidi</h1>
-        <p >Eléve ingénieur en informatique</p>
-    </div>
-    <div class="nav">
-        <ul>
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="about.html">A propos</a></li>
-            <li><a href="projetsacademique.html">Projets réalisés</a></li>
-            <li><a href="certificats.html">Certificats</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</header>
+    <!-- Header Section -->
+    <header>
+        <div class="me">
+            <h1 >Iheb Zaidi</h1>
+            <p >Etudiant ingénieur en informatique</p>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <li><a href="projetsacademique.html">Projets réalisés</a></li>
+                <li><a href="certificats.html">Certificats</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
 
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h1>À propos de moi</h1>
+            <hr>
+            <blockquote>
+                <h3>"On arrive au succès par son propre travail"</h3>
+            </blockquote>
+            <p>Je suis une personne sérieuse dans mon travail, polyvalente et discrète.</p>
 
-<div class="about">
-<h1>A propos de moi</h1>
-    <hr>
-    <h3> "On arrive au succès par son propre travail"</h3>
-    <p>Je suis une personne sérieuse dans mon travail , polyvalente et discrète.</p>
-    <div class="birthday">
-        <img src="../image/birthday.jpg" >
-        <h5>Date de naissance:</h5>
-        <p>02/12/2000</p>
+            <div class="personal-info">
+                <div class="info-item">
+                    <img src="../image/birthday.jpg" alt="Date de naissance">
+                    <div>
+                        <h5>Date de naissance:</h5>
+                        <p>02/12/2000</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img src="../image/icon-email-512.png" alt="Email">
+                    <div>
+                        <h5>Email:</h5>
+                        <p><a href="mailto:iheb.zaidi@esprit.tn">iheb.zaidi@esprit.tn</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img src="../image/tel.png" alt="Téléphone">
+                    <div>
+                        <h5>Téléphone:</h5>
+                        <p><a href="tel:+21652107756">+216 52107756</a></p>
+                    </div>
+                </div>
+            </div>
 
-    </div>
-    <div class="birthday">
-        <img src="../image/icon-email-512.png" >
-        <h5>Email:</h5>
-<p>iheb.zaidi@esprit.tn</p>
-    </div>
-    <div class="birthday">
-        <img src="../image/tel.png" >
-        <h5>Téléphone:</h5>
-        <p>+216 52107756</p>
-    </div>
-    <img src="../image/about.jpeg" class="aboume">
-</div>
-<div class="formation">
-<h1>Formation</h1>
-    <hr>
-    <div class="esprit">
-        <h4>2022 -2025</h4>
-        <p>Ecole Sup Privée d'Ingénierie et de Technologies</p>
-    </div>
-    <div class="UC">
-        <h4>2019 -2022</h4>
-        <p>Ecole Centrale Supérieure Privée d'Informatique et de
-            Télécommunications</p>
-    </div>
-    <div class="bac">
-        <h4>2019</h4>
-        <p>Baccalauréat</p>
-    </div>
-</div>
-<div class="centreinter">
-<h1>Centres d'intérêt</h1>
-    <hr>
-    <p>J'aime beaucoup voyager pour découvrir, de nouveaux pays, de nouvelles cultures.
+            <img src="../image/about.jpeg" class="about-me" alt="À propos de moi">
+        </div>
+    </section>
 
-        Je suis douée aussi en photographie, et la création des logos et des affiches.</p>
-    <img src="../image/voyager.jpg" class="voyage">
-</div>
+    <!-- Formation Section -->
+    <section class="formation">
+        <div class="container">
+            <h1>Formation</h1>
+            <hr>
+            <div class="formation-item">
+                <h4>2022 - 2025</h4>
+                <p>École Sup Privée d'Ingénierie et de Technologies</p>
+            </div>
+            <div class="formation-item">
+                <h4>2019 - 2022</h4>
+                <p>École Centrale Supérieure Privée d'Informatique et de Télécommunications</p>
+            </div>
+            <div class="formation-item">
+                <h4>2019</h4>
+                <p>Baccalauréat</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Centres d'intérêt Section -->
+    <section class="centreinter">
+        <div class="container">
+            <h1>Centres d'intérêt</h1>
+            <hr>
+            <p>J'aime beaucoup voyager pour découvrir de nouveaux pays et de nouvelles cultures. Je suis également passionné par la photographie, la création de logos, et les affiches.</p>
+            <img src="../image/voyager.jpg" class="voyage" alt="Voyager">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Iheb Zaidi. Tous droits réservés.</p>
+        </div>
+    </footer>
 
 </body>
+
 </html>
