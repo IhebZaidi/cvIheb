@@ -5,106 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À Propos de Iheb Zaidi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Header Section -->
-    <header>
-        <div class="me">
-            <h1 >Iheb Zaidi</h1>
-            <p >Etudiant ingénieur en informatique</p>
-        </div>
-        <div class="nav">
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="about.html">A propos</a></li>
-                <li><a href="projetsacademique.html">Projets réalisés</a></li>
-                <li><a href="certificats.html">Certificats</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h4">Iheb Zaidi</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="projetsacademique.html">Projets réalisés</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="certificats.html">Certificats</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about py-5">
         <div class="container">
-            <h1>À propos de moi</h1>
-            <hr>
-            <blockquote>
-                <h3>"On arrive au succès par son propre travail"</h3>
+            <h1 class="text-center">À propos de moi</h1>
+            <hr class="mb-4">
+            <blockquote class="blockquote text-center">
+                <p class="mb-0">"On arrive au succès par son propre travail"</p>
             </blockquote>
-            <p>Je suis une personne sérieuse dans mon travail, polyvalente et discrète.</p>
+            <p class="text-center">Je suis une personne sérieuse dans mon travail, polyvalent et discrète.</p>
 
-            <div class="personal-info">
-                <div class="info-item">
-                    <img src="../image/birthday.jpg" alt="Date de naissance">
-                    <div>
-                        <h5>Date de naissance:</h5>
-                        <p>02/12/2000</p>
-                    </div>
+            <div class="row gy-4 my-4">
+                <div class="col-md-4 text-center">
+                    <img src="../image/birthday.jpg" alt="Date de naissance" class="img-fluid mb-3">
+                    <h5>Date de naissance:</h5>
+                    <p>02/12/2000</p>
                 </div>
-                <div class="info-item">
-                    <img src="../image/icon-email-512.png" alt="Email">
-                    <div>
-                        <h5>Email:</h5>
-                        <p><a href="mailto:iheb.zaidi@esprit.tn">iheb.zaidi@esprit.tn</a></p>
-                        <p><a href="mailto:iheb.zaidi.med@gmail.com"> iheb.zaidi.med@gmail.com</a></p>
-
-                       
-                    </div>
+                <div class="col-md-4 text-center">
+                    <img src="../image/icon-email-512.png" alt="Email" class="img-fluid mb-3">
+                    <h5>Email:</h5>
+                    <p><a href="mailto:iheb.zaidi@esprit.tn">iheb.zaidi@esprit.tn</a></p>
+                    <p><a href="mailto:iheb.zaidi.med@gmail.com">iheb.zaidi.med@gmail.com</a></p>
                 </div>
-                <div class="info-item">
-                    <img src="../image/tel.png" alt="Téléphone">
-                    <div>
-                        <h5>Téléphone:</h5>
-                        <p><a href="tel:+21652107756">+216 52107756</a></p>
-                    </div>
+                <div class="col-md-4 text-center">
+                    <img src="../image/tel.png" alt="Téléphone" class="img-fluid mb-3">
+                    <h5>Téléphone:</h5>
+                    <p><a href="tel:+21652107756">+216 52107756</a></p>
                 </div>
             </div>
 
-            <img src="../image/about.jpeg" class="about-me" alt="À propos de moi">
+            <div class="text-center">
+                <img src="../image/about.jpeg" class="about-me img-fluid rounded" alt="À propos de moi">
+            </div>
         </div>
     </section>
 
     <!-- Formation Section -->
-    <section class="formation">
+    <section class="formation py-5 bg-light">
         <div class="container">
-            <h1>Formation</h1>
-            <hr>
-            <div class="formation-item">
-                <h4>2022 - 2025</h4>
-                <p>École Sup Privée d'Ingénierie et de Technologies</p>
-            </div>
-            <div class="formation-item">
-                <h4>2019 - 2022</h4>
-                <p>École Centrale Supérieure Privée d'Informatique et de Télécommunications</p>
-            </div>
-            <div class="formation-item">
-                <h4>2019</h4>
-                <p>Baccalauréat</p>
+            <h1 class="text-center">Formation</h1>
+            <hr class="mb-4">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <h4>2022 - 2025</h4>
+                    <p>École Sup Privée d'Ingénierie et de Technologies</p>
+                </div>
+                <div class="list-group-item">
+                    <h4>2019 - 2022</h4>
+                    <p>École Centrale Supérieure Privée d'Informatique et de Télécommunications</p>
+                </div>
+                <div class="list-group-item">
+                    <h4>2019</h4>
+                    <p>Baccalauréat</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Centres d'intérêt Section -->
-    <section class="centreinter">
+    <section class="centreinter py-5">
         <div class="container">
-            <h1>Centres d'intérêt</h1>
-            <hr>
-            <p>J'aime beaucoup voyager pour découvrir de nouveaux pays et de nouvelles cultures. Je suis également passionné par la photographie, la création de logos, et les affiches.</p>
-            <img src="../image/voyager.jpg" class="voyage" alt="Voyager">
+            <h1 class="text-center">Centres d'intérêt</h1>
+            <hr class="mb-4">
+            <p class="text-center">J'aime beaucoup voyager pour découvrir de nouveaux pays et de nouvelles cultures. Je suis également passionné par la photographie, la création de logos, et les affiches.</p>
+            <div class="text-center">
+                <img src="../image/voyager.jpg" class="voyage img-fluid rounded" alt="Voyager">
+            </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Iheb Zaidi. Tous droits réservés.</p>
-        </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Iheb Zaidi. Tous droits réservés.</p>
     </footer>
 
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
