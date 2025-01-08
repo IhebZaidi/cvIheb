@@ -20,61 +20,113 @@
     <header class="bg-dark text-white py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="h4">Iheb Zaidi</h1>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="about.html">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="projetsacademique.html">Projets réalisés</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="certificats.html">Certificats</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="../index.html">
+                        <i class="fas fa-code me-2"></i>Portfolio
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">
+                                    <i class="fas fa-home me-1"></i>Accueil
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">
+                                    <i class="fas fa-user me-1"></i>À propos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="projetsacademique.html">
+                                    <i class="fas fa-project-diagram me-1"></i>Projets
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="certificats.html">
+                                    <i class="fas fa-certificate me-1"></i>Certifications
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contact.html">
+                                    <i class="fas fa-envelope me-1"></i>Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
     <!-- Contact Information Section -->
     <div class="container my-5">
-        <h1 class="text-center mb-4">Contact Information</h1>
+        <h1 class="section-title text-center mb-5">Contactez-moi</h1>
         <div class="row">
-            <div class="col-md-6">
-                <div class="mb-4">
-                    <h3>Adresse :</h3>
-                    <p>Tunis, Medenine <br>
-                        Steg Médenine, Route Gabes, Nouvelle Medenine - 23, Tunisie, 4130</p>
-                </div>
-                <div class="mb-4">
-                    <h3>Téléphone :</h3>
-                    <p>+216 52 107 756</p>
-                </div>
-                <div class="mb-4">
-                    <h3>Réseaux Sociaux :</h3>
-                    <a href="https://www.linkedin.com/in/iheb-zaidi-345a0a18b" target="_blank">
-                        <img src="../image/linkd.PNG" class="img-fluid" alt="LinkedIn">
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=100006076816325" target="_blank">
-                        <img src="../image/facebook.png" class="img-fluid" alt="Facebook">
-                    </a>
+            <div class="col-md-6 mb-4">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt fa-2x mb-3"></i>
+                        <h3>Adresse</h3>
+                        <p>Tunis, Medenine<br>
+                            Steg Médenine, Route Gabes, Nouvelle Medenine - 23, Tunisie, 4130</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone fa-2x mb-3"></i>
+                        <h3>Téléphone</h3>
+                        <p><a href="tel:+21652107756" class="text-white">+216 52 107 756</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope fa-2x mb-3"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:iheb.zaidi@esprit.tn" class="text-white">iheb.zaidi@esprit.tn</a></p>
+                    </div>
+                    <div class="social-links mt-4">
+                        <a href="https://www.linkedin.com/in/iheb-zaidi-345a0a18b" target="_blank">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100006076816325" target="_blank">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <!-- Contact Form -->
             <div class="col-md-6">
-                <h3>Envoyer un Message</h3>
-                <form id="contactForm" onsubmit="sendMail(event)">
-                    <div class="mb-3">
-                        <input type="text" id="prenom" class="form-control" placeholder="Prénom" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" id="email" class="form-control" placeholder="Email" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" id="sujet" class="form-control" placeholder="Sujet">
-                    </div>
-                    <div class="mb-3">
-                        <textarea id="message" class="form-control" placeholder="Message.." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
-                </form>
+                <div class="contact-form">
+                    <h3 class="mb-4"><i class="fas fa-paper-plane me-2"></i>Envoyez-moi un message</h3>
+                    <form id="contactForm" onsubmit="sendMail(event)">
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" id="prenom" class="form-control" placeholder="Prénom" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                <input type="email" id="email" class="form-control" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-heading"></i></span>
+                                <input type="text" id="sujet" class="form-control" placeholder="Sujet">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-comment"></i></span>
+                                <textarea id="message" class="form-control" placeholder="Votre message..." rows="5" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-paper-plane me-2"></i>Envoyer
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

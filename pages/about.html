@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -16,14 +17,44 @@
     <header class="bg-dark text-white py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="h4">Iheb Zaidi</h1>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="about.html">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="projetsacademique.html">Projets réalisés</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="certificats.html">Certificats</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="../index.html">
+                        <i class="fas fa-code me-2"></i>Portfolio
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">
+                                    <i class="fas fa-home me-1"></i>Accueil
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="about.html">
+                                    <i class="fas fa-user me-1"></i>À propos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="projetsacademique.html">
+                                    <i class="fas fa-project-diagram me-1"></i>Projets
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="certificats.html">
+                                    <i class="fas fa-certificate me-1"></i>Certifications
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">
+                                    <i class="fas fa-envelope me-1"></i>Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -31,34 +62,46 @@
     <!-- About Section -->
     <section class="about py-5">
         <div class="container">
-            <h1 class="text-center">À propos de moi</h1>
-            <hr class="mb-4">
-            <blockquote class="blockquote text-center">
-                <p class="mb-0">"On arrive au succès par son propre travail"</p>
-            </blockquote>
-            <p class="text-center">Je suis une personne sérieuse dans mon travail, polyvalent et discrète.</p>
-
-            <div class="row gy-4 my-4">
-                <div class="col-md-4 text-center">
-                    <img src="../image/birthday.jpg" alt="Date de naissance" class="img-fluid mb-3">
-                    <h5>Date de naissance:</h5>
-                    <p>02/12/2000</p>
+            <h1 class="section-title text-center">À propos de moi</h1>
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <div class="about-image">
+                        <img src="../image/about.jpeg" class="img-fluid rounded shadow" alt="À propos de moi">
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img src="../image/icon-email-512.png" alt="Email" class="img-fluid mb-3">
-                    <h5>Email:</h5>
-                    <p><a href="mailto:iheb.zaidi@esprit.tn">iheb.zaidi@esprit.tn</a></p>
-                    <p><a href="mailto:iheb.zaidi.med@gmail.com">iheb.zaidi.med@gmail.com</a></p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="../image/tel.png" alt="Téléphone" class="img-fluid mb-3">
-                    <h5>Téléphone:</h5>
-                    <p><a href="tel:+21652107756">+216 52107756</a></p>
+                <div class="col-md-6">
+                    <div class="about-content">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">"On arrive au succès par son propre travail"</p>
+                        </blockquote>
+                        <p class="lead">Je suis une personne sérieuse dans mon travail, polyvalent et discrète.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="text-center">
-                <img src="../image/about.jpeg" class="about-me img-fluid rounded" alt="À propos de moi">
+            <div class="row gy-4 info-cards">
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <i class="fas fa-calendar-alt fa-3x mb-3"></i>
+                        <h5>Date de naissance</h5>
+                        <p>02/12/2000</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <i class="fas fa-envelope fa-3x mb-3"></i>
+                        <h5>Email</h5>
+                        <p><a href="mailto:iheb.zaidi@esprit.tn">iheb.zaidi@esprit.tn</a></p>
+                        <p><a href="mailto:iheb.zaidi.med@gmail.com">iheb.zaidi.med@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <i class="fas fa-phone fa-3x mb-3"></i>
+                        <h5>Téléphone</h5>
+                        <p><a href="tel:+21652107756">+216 52107756</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -104,6 +147,14 @@
 
     <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        fetch('../components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

@@ -15,46 +15,99 @@
         <header class="bg-dark text-white py-3">
             <div class="container d-flex justify-content-between align-items-center">
                 <h1 class="h4">Iheb Zaidi</h1>
-                <nav>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="about.html">À propos</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="projetsacademique.html">Projets réalisés</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="certificats.html">Certificats</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                    </ul>
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container">
+                        <a class="navbar-brand" href="../index.html">
+                            <i class="fas fa-code me-2"></i>Portfolio
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">
+                                        <i class="fas fa-home me-1"></i>Accueil
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">
+                                        <i class="fas fa-user me-1"></i>À propos
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="projetsacademique.html">
+                                        <i class="fas fa-project-diagram me-1"></i>Projets
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="certificats.html">
+                                        <i class="fas fa-certificate me-1"></i>Certifications
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">
+                                        <i class="fas fa-envelope me-1"></i>Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </header>
 
 <div class="container my-5">
-    <h1 class="text-center mb-4">Mes Certificats</h1>
-    <hr>
+    <h1 class="section-title text-center mb-5">Mes Certifications</h1>
     <div class="row g-4">
         <!-- Certificat 1 -->
         <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <img src="../image/aws.png" class="card-img-top" alt="AWS Certification">
-                <div class="card-body text-center">
-                    <a href="https://www.coursera.org/account/accomplishments/records/JL97PDSRE7SX" target="_blank" class="btn btn-primary">Voir plus</a>
+            <div class="certificate-card h-100">
+                <div class="certificate-image">
+                    <img src="../image/aws.png" class="card-img-top" alt="AWS Certification">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">AWS Cloud Practitioner</h5>
+                    <p class="card-text">Certification Amazon Web Services</p>
+                    <a href="https://www.coursera.org/account/accomplishments/records/JL97PDSRE7SX" 
+                       target="_blank" 
+                       class="btn btn-primary">
+                        <i class="fas fa-external-link-alt me-2"></i>Voir le certificat
+                    </a>
                 </div>
             </div>
         </div>
         <!-- Certificat 2 -->
         <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <img src="../image/cloud.png" class="card-img-top" alt="Cloud Certification">
-                <div class="card-body text-center">
-                    <a href="https://www.coursera.org/account/accomplishments/verify/Y97PTT4BNM5G" target="_blank" class="btn btn-primary">Voir plus</a>
+            <div class="certificate-card h-100">
+                <div class="certificate-image">
+                    <img src="../image/cloud.png" class="card-img-top" alt="Cloud Certification">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Cloud Computing</h5>
+                    <p class="card-text">Certification Cloud Computing</p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/Y97PTT4BNM5G" 
+                       target="_blank" 
+                       class="btn btn-primary">
+                        <i class="fas fa-external-link-alt me-2"></i>Voir le certificat
+                    </a>
                 </div>
             </div>
         </div>
         <!-- Certificat 3 -->
         <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <img src="../image/honoris.png" class="card-img-top" alt="Honoris Certification">
-                <div class="card-body text-center">
-                    <a href="https://certificate.bcdiploma.com/check/0EF33599625152C7988385CB6A7FFDD9BCADFA880A79AE5E25393884EB184A15QXVWdWJVdm5ZZDB3YU4rNkZuZnRaTU1kWFQxcGN3SGh2dkY2Ly85NU9iQ05SUTNN" target="_blank" class="btn btn-primary">Voir plus</a>
+            <div class="certificate-card h-100">
+                <div class="certificate-image">
+                    <img src="../image/honoris.png" class="card-img-top" alt="Honoris Certification">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Honoris</h5>
+                    <p class="card-text">Certification Honoris</p>
+                    <a href="https://certificate.bcdiploma.com/check/0EF33599625152C7988385CB6A7FFDD9BCADFA880A79AE5E25393884EB184A15QXVWdWJVdm5ZZDB3YU4rNkZuZnRaTU1kWFQxcGN3SGh2dkY2Ly85NU9iQ05SUTNN" 
+                       target="_blank" 
+                       class="btn btn-primary">
+                        <i class="fas fa-external-link-alt me-2"></i>Voir le certificat
+                    </a>
                 </div>
             </div>
         </div>

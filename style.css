@@ -1,202 +1,516 @@
-/* Reset default browser styles for consistency */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Variables globales */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
 }
 
+/* Styles généraux */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* Header Styles */
-header {
-    background-color: #fff;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Animation pour les cartes */
+.card {
+    transition: transform 0.3s ease;
 }
 
-.nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    padding: 10px;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.nav a:hover {
-    color: #fff;
-    background-color: #007bff;
-    border-radius: 4px;
-}
-
-/* Profile Picture Styles */
-.photoprofile {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 20px auto;
-    display: block;
-    object-fit: cover;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    border: 4px solid #007bff;
-}
-
-/* Main Content */
-.description, .competences {
-    padding: 40px 30px;
-    max-width: 900px;
-    margin: 30px auto;
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.description:hover, .competences:hover {
+.card:hover {
     transform: translateY(-5px);
 }
 
-.competences {
-    background-color: #f8f9fa;
-    margin-top: 30px;
+/* Style pour la section compétences */
+.skill-item {
+    margin-bottom: 1rem;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 30px 40px;
-    font-size: 0.9em;
-    gap: 20px;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+.progress {
+    height: 10px;
+    border-radius: 5px;
 }
 
-footer img {
-    width: 50px;
-    margin-right: 10px;
+.progress-bar {
+    background-color: var(--primary-color);
 }
 
-.icons {
-    display: flex;
-    gap: 20px;
+/* Style pour la photo de profil */
+.photoprofile {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    transition: transform 0.3s ease;
 }
 
-.icons img {
-    width: 35px;
-    height: 35px;
-    transition: transform 0.3s, filter 0.3s;
-    cursor: pointer;
-}
-
-.icons img:hover {
-    transform: scale(1.2);
-    filter: brightness(1.5);
-}
-
-/* Button Styles */
-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1em;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
+.photoprofile:hover {
     transform: scale(1.05);
 }
 
-/* Responsive Adjustments */
+/* Style pour le footer */
+footer {
+    margin-top: auto;
+}
+
+/* Media queries pour la responsivité */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
+    .navbar-nav {
         text-align: center;
     }
-
-    .nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px 0;
-    }
-
-    .nav a {
-        padding: 10px 20px;
-        width: 100%;
-    }
-
-    .description, .competences {
-        padding: 30px 20px;
-        margin: 20px 15px;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
+    
     .photoprofile {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Style pour la navigation */
+.navbar {
+    background: linear-gradient(to right, #1a1a1a, #2c3e50) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: translateY(-2px);
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/* Ajustements pour mobile */
+@media (max-width: 768px) {
+    .navbar-nav {
+        background: rgba(0,0,0,0.95);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 0.5rem;
     }
 
-}
-/* Styles pour toutes les images */
-img {
-    max-width: 100%; /* S'assure que les images ne dépassent pas leur conteneur */
-    height: auto; /* Maintient le ratio d'aspect */
-    display: block; /* Supprime l'espace en bas de l'image */
-    margin: 0 auto; /* Centre les images */
-    border-radius: 8px; /* Donne des coins arrondis pour un style plus doux */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet de surélévation */
+    .nav-link {
+        text-align: center;
+        padding: 0.8rem !important;
+        margin: 0.2rem 0;
+    }
+
+    .nav-link:hover {
+        background: rgba(255,255,255,0.1);
+        border-radius: 4px;
+    }
 }
 
-/* Style spécifique pour les images de la section "about" */
-.about-me {
-    width: 250px; /* Taille définie pour la photo de profil */
-    border-radius: 50%; /* Donne une forme ronde à l'image de profil */
-    margin-top: 20px; /* Espace entre l'image et le reste du contenu */
+/* Animations générales */
+.fade-in {
+    animation: fadeIn 1s ease-in;
 }
 
-/* Styles spécifiques pour les images des informations personnelles */
-.personal-info img {
-    width: 40px; /* Taille fixe pour les icônes des infos personnelles */
-    height: 40px; /* Hauteur fixe pour garder une cohérence */
-    border-radius: 50%; /* Donne des coins arrondis aux icônes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Styles spécifiques pour les images des centres d'intérêt */
-.voyage {
-    max-width: 600px; /* Limite la taille maximale de l'image */
-    height: auto; /* Garde le ratio d'aspect */
-    margin: 20px auto; /* Centre l'image et ajoute un espace autour */
+/* Style des cartes de compétences */
+.skill-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Effet d'animation au survol de toutes les images */
-img:hover {
-    transform: scale(1.05); /* Augmente légèrement la taille de l'image au survol */
-    transition: transform 0.3s ease; /* Transition douce pour l'effet de zoom */
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.skill-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-item span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.progress {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: linear-gradient(45deg, var(--primary-color), #0056b3);
+    transition: width 1s ease-in-out;
+}
+
+/* Style pour les sections */
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+/* Style pour les cartes de projet */
+.project-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-card .card-body {
+    padding: 1.5rem;
+}
+
+.project-card .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Style pour le footer */
+.footer {
+    background: linear-gradient(to right, #1a1a1a, #2c3e50);
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Style pour le formulaire de contact */
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form .form-control {
+    border: 2px solid #eee;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+}
+
+.contact-info {
+    background: linear-gradient(45deg, var(--primary-color), #0056b3);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.contact-info h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Style pour les cartes de certificats */
+.certificate-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.certificate-card img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover img {
+    transform: scale(1.05);
+}
+
+.certificate-card .card-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.certificate-card .btn-primary {
+    border-radius: 25px;
+    padding: 8px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.certificate-card .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+}
+
+/* Style pour les cartes de projets */
+.project-detail-card {
+    border: none;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.project-detail-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-detail-card .card-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.project-detail-card .card-text {
+    color: #666;
+    line-height: 1.8;
+}
+
+.project-detail-card .technologies {
+    margin-top: 15px;
+}
+
+.project-detail-card .tech-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* Style pour les icônes des langages */
+.language-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.skill-item span {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Style pour les icônes des compétences */
+.skill-icon {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    width: 25px;
+    text-align: center;
+}
+
+.skill-item span {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Couleurs des icônes */
+.fa-python { color: #306998; }
+.fa-java { color: #5382a1; }
+.fa-js { color: #F0DB4F; }
+.fa-code { color: #00599C; }
+
+/* Couleurs spécifiques pour les barres de progression des langages */
+.progress-bar.python { background: linear-gradient(45deg, #306998, #FFD43B); }
+.progress-bar.java { background: linear-gradient(45deg, #5382a1, #f89820); }
+.progress-bar.cpp { background: linear-gradient(45deg, #00599C, #004482); }
+.progress-bar.c { background: linear-gradient(45deg, #283593, #1565C0); }
+.progress-bar.javascript { background: linear-gradient(45deg, #F0DB4F, #323330); }
+
+/* Animation pour les barres de progression */
+.progress-bar {
+    transition: width 1s ease-in-out;
+    animation: progressAnimation 1s ease-out;
+}
+
+@keyframes progressAnimation {
+    from { width: 0; }
+}
+
+/* Style pour les cartes d'information */
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card i {
+    color: var(--primary-color);
+}
+
+.info-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+    color: #0056b3;
+}
+
+/* Style pour la section à propos */
+.about-image img {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about-content {
+    padding: 2rem;
+}
+
+.blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+    margin: 2rem 0;
+}
+
+/* Style pour la section formation */
+.formation-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.formation-item:hover {
+    transform: translateX(10px);
+}
+
+.formation-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }

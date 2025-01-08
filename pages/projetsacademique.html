@@ -15,100 +15,216 @@
         <header class="bg-dark text-white py-3">
             <div class="container d-flex justify-content-between align-items-center">
                 <h1 class="h4">Iheb Zaidi</h1>
-                <nav>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="about.html">À propos</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="projetsacademique.html">Projets réalisés</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="certificats.html">Certificats</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                    </ul>
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container">
+                        <a class="navbar-brand" href="../index.html">
+                            <i class="fas fa-code me-2"></i>Portfolio
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">
+                                        <i class="fas fa-home me-1"></i>Accueil
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">
+                                        <i class="fas fa-user me-1"></i>À propos
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="projetsacademique.html">
+                                        <i class="fas fa-project-diagram me-1"></i>Projets
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="certificats.html">
+                                        <i class="fas fa-certificate me-1"></i>Certifications
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">
+                                        <i class="fas fa-envelope me-1"></i>Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </header>
 
 <div class="container my-5">
-    <h1 class="text-center mb-4">Mes Projets</h1>
+    <h1 class="section-title text-center mb-5">Mes Projets</h1>
     <div class="row gy-4">
         <!-- Projet 1 -->
         <div class="col-md-6">
-            <div class="card shadow-sm h-100">
+            <div class="project-detail-card h-100">
                 <div class="card-body">
-                    <h3 class="card-title">Stage d'été (Entreprise ELYADATA)</h3>
+                    <h3 class="card-title">
+                        <i class="fas fa-laptop-code me-2"></i>
+                        Stage d'été (Entreprise ELYADATA)
+                    </h3>
                     <p class="card-text">
                         Expérimenté en développement de REST API avec FastAPI, incluant les opérations CRUD 
                         via GET, POST, DELETE, et UPDATE, gestion de bases de données MySQL avec Python, et 
                         maîtrise de Git, Bitbucket, et GitHub pour le contrôle de versions et la collaboration en 
-                        équipe. (juin 2021 - août 2021)
+                        équipe.
                     </p>
+                    <div class="technologies">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <div class="project-date mt-3">
+                        <i class="far fa-calendar-alt me-2"></i>
+                        juin 2021 - août 2021
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Projet 2 -->
         <div class="col-md-6">
-            <div class="card shadow-sm h-100">
+            <div class="project-detail-card h-100">
                 <div class="card-body">
-                    <h3 class="card-title">Stage Technicien PFE (Entreprise ELYADATA)</h3>
+                    <h3 class="card-title">
+                        <i class="fas fa-laptop-code me-2"></i>
+                        Stage Technicien PFE (Entreprise ELYADATA)
+                    </h3>
                     <p class="card-text">
                         Conception et implémentation d'un système de monitoring en temps réel pour une application 
                         d'annotation de fichiers audio, utilisant Angular pour le front-end, REST API, Spark Streaming, 
                         Kafka pour le traitement des flux de données, Python pour la logique métier et Docker pour la 
-                        conteneurisation et le déploiement. (janv 2022 - juin 2022)
+                        conteneurisation et le déploiement.
                     </p>
+                    <div class="technologies">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Spark Streaming</span>
+                        <span class="tech-tag">Kafka</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-date mt-3">
+                        <i class="far fa-calendar-alt me-2"></i>
+                        janv 2022 - juin 2022
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Projet 3 -->
         <div class="col-md-6">
-            <div class="card shadow-sm h-100">
+            <div class="project-detail-card h-100">
                 <div class="card-body">
-                    <h3 class="card-title">Stage d'été (ATI)</h3>
+                    <h3 class="card-title">
+                        <i class="fas fa-laptop-code me-2"></i>
+                        Stage d'été (ATI)
+                    </h3>
                     <p class="card-text">
                         Refonte de l'espace d'administration du registre national / Bureaux d'enregistrement.
-                        Technologies : MySQL, PHP, phprunner, CENTOS7, Navicat. Déploiement du site avec certification SSL. 
-                        (juillet 2022 - août 2023)
+                        Technologies : MySQL, PHP, phprunner, CENTOS7, Navicat. Déploiement du site avec certification SSL.
                     </p>
+                    <div class="technologies">
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">CENTOS7</span>
+                        <span class="tech-tag">Navicat</span>
+                    </div>
+                    <div class="project-date mt-3">
+                        <i class="far fa-calendar-alt me-2"></i>
+                        juillet 2022 - août 2023
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Projet 4 -->
         <div class="col-md-6">
-            <div class="card shadow-sm h-100">
+            <div class="project-detail-card h-100">
                 <div class="card-body">
-                    <h3 class="card-title">PIDEV: Web et Desktop, Application Mobile (ESPRIT)</h3>
+                    <h3 class="card-title">
+                        <i class="fas fa-laptop-code me-2"></i>
+                        PIDEV: Web et Desktop, Application Mobile (ESPRIT)
+                    </h3>
                     <p class="card-text">
                         <strong>Technologies :</strong> Java/JavaFX, Symfony, Codename One.<br>
                         <strong>Rôle :</strong> Gestion de communauté, de club, et des évaluations.<br>
                         <strong>Méthodologie :</strong> Agile.<br>
-                        Développement de fonctionnalités clés telles que les avis des utilisateurs, gestion des clubs, et classes spécifiques pour la gestion des utilisateurs. (2022-2023)
+                        Développement de fonctionnalités clés telles que les avis des utilisateurs, gestion des clubs, et classes spécifiques pour la gestion des utilisateurs.
                     </p>
+                    <div class="technologies">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JavaFX</span>
+                        <span class="tech-tag">Symfony</span>
+                        <span class="tech-tag">Codename One</span>
+                    </div>
+                    <div class="project-date mt-3">
+                        <i class="far fa-calendar-alt me-2"></i>
+                        2022-2023
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Projet 5 -->
         <div class="col-md-6">
-            <div class="card shadow-sm h-100">
+            <div class="project-detail-card h-100">
                 <div class="card-body">
-                    <h3 class="card-title">PIDEV: Développement Web Gestion de Stage (ESPRIT)</h3>
+                    <h3 class="card-title">
+                        <i class="fas fa-laptop-code me-2"></i>
+                        PIDEV: Développement Web Gestion de Stage (ESPRIT)
+                    </h3>
                     <p class="card-text">
                         <strong>Technologies :</strong> SpringBoot, Angular, Architecture Microservices, Docker, Kubernetes, Minikube, Keycloak, Helm, Kafka, Minio.<br>
                         <strong>Rôle :</strong> Conception du backend selon l'architecture hexagonale, gestion des documents et génération automatique de rapports, CV et attestations de stage.<br>
-                        <strong>Méthodologie :</strong> Agile. (2023-2024)
+                        <strong>Méthodologie :</strong> Agile.
                     </p>
+                    <div class="technologies">
+                        <span class="tech-tag">SpringBoot</span>
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Architecture Microservices</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Minikube</span>
+                        <span class="tech-tag">Keycloak</span>
+                        <span class="tech-tag">Helm</span>
+                        <span class="tech-tag">Kafka</span>
+                        <span class="tech-tag">Minio</span>
+                    </div>
+                    <div class="project-date mt-3">
+                        <i class="far fa-calendar-alt me-2"></i>
+                        2023-2024
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Projet 6 -->
         <div class="col-md-6">
-            <div class="card shadow-sm h-100">
+            <div class="project-detail-card h-100">
                 <div class="card-body">
-                    <h3 class="card-title">Développement d'une solution de prévision pour les données de ventes</h3>
+                    <h3 class="card-title">
+                        <i class="fas fa-laptop-code me-2"></i>
+                        Développement d'une solution de prévision pour les données de ventes
+                    </h3>
                     <p class="card-text">
                         <strong>Technologies :</strong> Backend avec Python FastAPI, Frontend avec HTML, CSS, et JavaScript.<br>
                         <strong>Modèles :</strong> RandomForest, LightGBM, XGBoost, LSTM.<br>
                         <strong>Déploiement :</strong> Docker.<br>
-                        Projet de prévision des séries temporelles avec utilisation des techniques avancées de machine learning. (juin 2024 - août 2024)
+                        Projet de prévision des séries temporelles avec utilisation des techniques avancées de machine learning.
                     </p>
+                    <div class="technologies">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-date mt-3">
+                        <i class="far fa-calendar-alt me-2"></i>
+                        juin 2024 - août 2024
+                    </div>
                 </div>
             </div>
         </div>
